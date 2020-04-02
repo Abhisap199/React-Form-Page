@@ -1,7 +1,7 @@
-import React from 'react';
-import FornContainer from './FornContainer'
+import React, { Component } from 'react'
+import FormComponent from './FormComponent';
 
-class App extends React.Component
+class FormContainer extends Component
 {
   constructor()
   {
@@ -29,15 +29,12 @@ class App extends React.Component
     
     render()
     {
-   return(
-     <div>
-       <FornContainer handlechange={this.handlechange}/>
-     </div>
-   ) 
+      return(
+          <div>
+              <FormComponent handlechange={this.handlechange} data = {this.state}/>
+          </div>
+      )   
   }
 }
 
-
-
-
-export default App;
+export default FormContainer
